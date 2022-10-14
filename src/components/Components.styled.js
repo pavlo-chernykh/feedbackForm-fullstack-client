@@ -8,7 +8,12 @@ export const AppWrapper = styled.div`
   flex-direction: column;
   align-items: stretch;
 `
-
+export const LoaderDiv = styled.div`
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+`
 export const Main = styled.main`
   background: url('../assets/orange_cartoon.png') 2% 5%,
     url('../assets/street_bg.png') top right,

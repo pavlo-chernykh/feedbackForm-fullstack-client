@@ -1,17 +1,19 @@
 import { useDispatch, useSelector } from 'react-redux';
 import { setName, setEmail, setMessage, setId } from '../redux/feedbackSlice';
-import {toast, ToastContainer} from 'react-toastify'
+import {toast, ToastContainer} from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import {
   Form,
   FormHeader,
   TextInput,
   MsgInput,
-  SubmitBtn
+  SubmitBtn,
+  LoaderDiv
 } from './Components.styled'
 
 import { useAddFeedbackMutation } from '../redux/feedbackApi'
 import { useAddUserMutation } from '../redux/userApi'
+import Loader from './loader/Loader';
 
 const FeedbackForm = () => {
   const feedback = useSelector(state => state.feedback)
@@ -57,6 +59,7 @@ const FeedbackForm = () => {
   }
   return (
     <>
+      {isLoading && <LoaderDiv><Loader/></LoaderDiv>}
       <Form onSubmit={submitHandler}>
         <FormHeader>Reach out to us!</FormHeader>
         <TextInput
