@@ -5,7 +5,8 @@ const todoSlice = createSlice({
   initialState: {
     name: '',
     email: '',
-    message: ''
+    message: '',
+    id: null
   },
   reducers: {
     setName: (state, {payload}) => {
@@ -16,10 +17,17 @@ const todoSlice = createSlice({
     },
     setMessage: (state, {payload}) => {
       state.message = payload
+    },
+    setId: (state, {payload}) => {
+      state.id = payload
     }
   }
 })
 
-export const {setName, setEmail, setMessage} = todoSlice.actions;
+export const {
+  setName, 
+  setEmail,
+  setId, 
+  setMessage} = todoSlice.actions;
 
 export default todoSlice.reducer;

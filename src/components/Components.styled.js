@@ -61,6 +61,7 @@ export const FormHeader = styled.h2`
 
 export const TextInput = styled.input`
   height: 93px;
+  max-width: 557px;
 
   border-radius: 10px;
   background: #ffffff;
@@ -78,6 +79,7 @@ export const TextInput = styled.input`
 
 export const MsgInput = styled.textarea`
   height: 189px;
+  max-width: 557px;
 
   border-radius: 10px;
   background: #ffffff;
